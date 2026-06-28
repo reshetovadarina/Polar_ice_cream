@@ -15,11 +15,14 @@
   --color-accessibility-focus: #3182ce;
   --content-max-width: 1160px;
 }
-* {
+.products-catalog *,
+.products-catalog *::before,
+.products-catalog *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 .products-catalog {
   background-color: var(--color-pure-white);
   padding: 100px 0;
