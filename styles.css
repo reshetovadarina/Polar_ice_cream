@@ -1,0 +1,147 @@
+:root {
+  --font-family-roboto: "Roboto", sans-serif;
+  --font-family-hind: "Hind Madurai", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --color-brand-pink: #d64374;
+  --color-brand-pink-hover: #b00f35;
+  --color-text-dark: #000000;
+  --color-text-body: #000000;
+  --color-text-muted: #000000;
+  --color-pure-white: #ffffff;
+  --color-accessibility-focus: #3182ce;
+  --content-max-width: 1160px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.products-catalog {
+  background-color: var(--color-pure-white);
+  padding: 100px 0;
+  width: 100%;
+}
+
+.products-catalog__container {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Рядок товару на комп'ютері: горизонтальний Flexbox */
+.product-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+}
+
+/* Модифікатор розгортає другий рядок дзеркально (картинка праворуч) */
+.product-item--reverse {
+  flex-direction: row-reverse;
+}
+
+.product-item__media,
+.product-item__content {
+  width: 50%;
+}
+
+.product-item__media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.product-item__image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Текстовий контент на комп'ютері вирівняний по лівому краю */
+.product-item__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.product-item__title {
+  font-family: var(--font-family-hind);
+  font-weight: var(--font-weight-bold);
+  font-size: 26px;
+  line-height: 100%;
+  color: var(--color-text-dark);
+  margin-bottom: 16px;
+}
+
+.product-item__description {
+  font-family: var(--font-family-roboto);
+  font-weight: var(--font-weight-regular); /* 1. Roboto Regular */
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-text-body);
+  margin-bottom: 24px;
+}
+
+.product-item__price-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.product-item__price-current {
+  font-family: var(--font-family-roboto);
+  font-weight: var(--font-weight-medium);
+  font-size: 26px;
+  color: var(--color-text-dark);
+}
+
+.product-item__price-old {
+  font-family: var(--font-family-hind);
+  font-weight: var(--font-weight-medium);
+  font-size: 20px;
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.product-item__button {
+  font-family: var(--font-family-roboto);
+  font-weight: var(--font-weight-medium);
+  font-size: 16px;
+  background-color: var(--color-brand-pink);
+  color: var(--color-pure-white);
+  border: none;
+  width: 165px;
+  padding: 12px 36px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.product-item__button:hover {
+  background-color: var(--color-brand-pink-hover);
+}
+
+.product-item__button:focus-visible {
+  outline: 3px solid var(--color-accessibility-focus);
+  outline-offset: 2px;
+}
+
+.product-item__button:active {
+  transform: scale(0.98);
+}
