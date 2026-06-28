@@ -145,3 +145,34 @@
 .product-item__button:active {
   transform: scale(0.98);
 }
+
+@media (max-width: 1279px) {
+  .products-catalog {
+    padding: 80px 0;
+  }
+
+  .product-item,
+  .product-item--reverse {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .product-item__media,
+  .product-item__content {
+    width: 100%;
+  }
+
+  .product-item__media {
+    max-width: 440px;
+  }
+
+  .product-item__content {
+    max-width: 480px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-item__title {
+    font-size: 26px;
+  }
+}
