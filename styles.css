@@ -36,7 +36,6 @@
   gap: 80px;
 }
 
-/* Рядок товару на комп'ютері: горизонтальний Flexbox */
 .product-item {
   display: flex;
   flex-direction: row;
@@ -46,7 +45,6 @@
   width: 100%;
 }
 
-/* Модифікатор розгортає другий рядок дзеркально (картинка праворуч) */
 .product-item--reverse {
   flex-direction: row-reverse;
 }
@@ -69,7 +67,6 @@
   object-fit: contain;
 }
 
-/* Текстовий контент на комп'ютері вирівняний по лівому краю */
 .product-item__content {
   display: flex;
   flex-direction: column;
@@ -88,7 +85,7 @@
 
 .product-item__description {
   font-family: var(--font-family-roboto);
-  font-weight: var(--font-weight-regular); /* 1. Roboto Regular */
+  font-weight: var(--font-weight-regular);
   font-size: 16px;
   line-height: 24px;
   color: var(--color-text-body);
