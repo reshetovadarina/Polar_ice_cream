@@ -20,6 +20,92 @@
   box-sizing: border-box;
 }
 
+.promo-banner {
+  background-color: #f8edf0;
+  padding: 30px 0;
+  width: 100%;
+}
+
+.promo-banner__container {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.promo-banner__content,
+.promo-banner__media {
+  width: 50%;
+}
+
+.promo-banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 442px;
+}
+
+.promo-banner__title {
+  font-family: var(--font-family-hind);
+  font-weight: var(--font-weight-bold);
+  font-size: 44px;
+  line-height: 1.1;
+  color: var(--color-text-dark);
+  margin-bottom: 16px;
+}
+.promo-banner__description {
+  font-family: var(--font-family-roboto);
+  font-weight: var(--font-weight-regular);
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--color-text-body);
+  margin-bottom: 24px;
+  opacity: 0.7;
+}
+
+.promo-banner__button {
+  font-family: var(--font-family-roboto);
+  font-weight: var(--font-weight-medium);
+  font-size: 15px;
+  background-color: var(--color-brand-pink);
+  color: var(--color-pure-white);
+  border: none;
+  width: 165px;
+  padding: 15px 40px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.promo-banner__button:hover {
+  background-color: var(--color-brand-pink-hover);
+}
+
+.promo-banner__button:active {
+  transform: scale(0.98);
+}
+
+.promo-banner__media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 655px;
+}
+
+.promo-banner__image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .products-catalog {
   background-color: var(--color-pure-white);
   padding: 100px 0;
@@ -149,6 +235,7 @@
   justify-content: center;
   align-items: center;
   padding: 25px;
+  max-width: 580px;
 }
 
 .product-item__image {
@@ -235,7 +322,38 @@
   transform: scale(0.98);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 780px) {
+  .promo-banner {
+    padding: 40px 0;
+  }
+
+  .promo-banner__container {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .promo-banner__content,
+  .promo-banner__media {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .promo-banner__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .promo-banner__title {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  .promo-banner__description {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
   .products-catalog {
     padding: 80px 0;
   }
