@@ -22,7 +22,7 @@
 
 .promo-banner {
   background-color: #f8edf0;
-  padding: 5px 0;
+  padding: 2px 0;
   width: 100%;
 }
 
@@ -322,6 +322,186 @@
   transform: scale(0.98);
 }
 
+.testimonials {
+  background-color: var(--color-pure-white);
+  padding: 30px 0;
+  width: 100%;
+}
+
+.testimonials__container {
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.testimonials__content,
+.testimonials__media {
+  width: 50%;
+}
+
+.testimonials__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 380px;
+}
+
+.testimonials__author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.testimonials__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonials__name {
+  font-family: var(--font-family-roboto);
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  color: var(--color-text-dark);
+}
+
+.testimonials__location {
+  font-family: var(--font-family-roboto);
+  font-weight: var(--font-weight-medium);
+  opacity: 0.7;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.testimonials__quote {
+  position: relative;
+  margin-bottom: 36px;
+  padding-left: 20px;
+}
+
+.testimonials__quote::before {
+  content: "“";
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f6762c;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  line-height: 1;
+}
+
+.testimonials__text {
+  font-family: var(--font-family-roboto);
+  font-weight: var(--font-weight-regular);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-text-body);
+  display: inline;
+}
+
+.testimonials__text::after {
+  content: " \00a0 ”";
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f6762c;
+  line-height: 1;
+}
+.testimonials__nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.testimonials__arrow {
+  background: transparent;
+  border: none;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-brand-pink);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.testimonials__arrow:hover {
+  transform: scale(1.2);
+}
+
+.testimonials__thumbs {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 50px;
+}
+
+.testimonials__thumb-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.testimonials__thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* МАГІЯ ВИСУВАННЯ: активна кнопка помітно піднімається вгору */
+.testimonials__thumb-btn--active {
+  transform: translateY(-8px);
+}
+
+.testimonials__thumb-btn--active .testimonials__thumb {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-pure-white);
+}
+
+.testimonials__thumb-btn:not(.testimonials__thumb-btn--active):hover
+  .testimonials__thumb {
+  transform: scale(1.1);
+}
+
+/* Права графічна частина з кулями морозива */
+.testimonials__media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials__image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 @media (max-width: 780px) {
   .promo-banner {
     padding: 40px 0;
@@ -392,5 +572,41 @@
 
   .product-item__title {
     font-size: 26px;
+  }
+
+  .testimonials {
+    padding: 40px 0;
+  }
+
+  .testimonials__container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .testimonials__content,
+  .testimonials__media {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .testimonials__content {
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .testimonials__author {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .testimonials__quote {
+    margin-bottom: 32px;
+    padding: 0 12px;
+  }
+
+  .testimonials__nav {
+    justify-content: center;
   }
 }
