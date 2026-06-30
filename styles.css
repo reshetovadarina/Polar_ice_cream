@@ -489,7 +489,6 @@
   transform: scale(1.1);
 }
 
-/* Права графічна частина з кулями морозива */
 .testimonials__media {
   display: flex;
   justify-content: center;
