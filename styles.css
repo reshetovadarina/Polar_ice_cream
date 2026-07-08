@@ -846,8 +846,6 @@
 .app-order__phone {
   max-width: 260px;
   width: 100%;
-  display: block;
-  position: relative;
   margin-bottom: -110px;
 }
 
@@ -927,8 +925,8 @@
 }
 
 .app-order__store-link img {
-  height: 40px;
-  max-height: 40px;
+  height: 30px;
+  max-height: 30px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -1458,51 +1456,7 @@
   .testimonials__nav {
     justify-content: center;
   }
-  .app-order {
-    padding: 40px 0;
-  }
 
-  .app-order__container {
-    flex-direction: column-reverse;
-    gap: 32px;
-  }
-
-  .app-order__content,
-  .app-order__media {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .app-order__content {
-    align-items: center;
-    text-align: center;
-  }
-
-  .app-order__title {
-    font-size: 26px;
-    margin-bottom: 14px;
-  }
-
-  .app-order__description {
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 20px;
-  }
-
-  .app-order__steps {
-    align-items: flex-start;
-    margin-bottom: 24px;
-  }
-
-  .app-order__stores {
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .app-order__phone {
-    max-width: 240px;
-    margin-bottom: 0;
-  }
   .questions-section {
     padding: 60px 0;
   }
@@ -1590,5 +1544,85 @@
 
   .main-footer__payments {
     justify-content: center;
+  }
+}
+@media (max-width: 780px) {
+  .app-order {
+    padding: 65px 0;
+  }
+
+  .app-order__container {
+    flex-direction: column-reverse;
+    gap: 48px;
+    padding: 0 20px;
+  }
+
+  .app-order__content,
+  .app-order__media {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .app-order__title {
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 18px;
+  }
+
+  .app-order__description {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 28px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .app-order__steps {
+    align-items: flex-start;
+    margin-bottom: 36px;
+    gap: 18px;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .app-order__step-item {
+    font-size: 16px;
+    gap: 14px;
+  }
+
+  .app-order__step-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  }
+
+  .app-order__step-icon img {
+    max-width: 20px;
+  }
+
+  .app-order__stores {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .app-order__store-link img {
+    height: 44px;
+  }
+
+  .app-order__media {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .app-order__phone {
+    max-width: 250px;
+    margin-bottom: 0;
   }
 }
